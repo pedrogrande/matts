@@ -8,15 +8,61 @@
  *= require_tree .
 */
 
+/*General*/
+
 body {
 	background-color: #fff;
 }
 
+/*Header*/
+
 header img {
 	
-	height: 175px;
+	height: 200px;
 }  
 
+/*Nav*/
+
+nav #main-nav-bar {
+	border-bottom: none; 
+}
+
 nav #taxon {
+	display: none;
+}
+
+nav #main-nav-bar li#link-to-cart a {
+	color: #000;
+}
+
+nav#top-nav-bar ul li a {
+	color: #000;
+}
+
+#home-link {
+	display: none;
+}
+
+li#link-to-cart {
+	padding: 0px;
+	top: 0;
+	right: 0;
+}
+
+/*product images*/
+
+ul#products li .product-image img {
+	border-image: 1px solid #000; 
+
+}
+
+ul#products li .product-image {
+	border: none;
+	
+}
+
+/*footer*/
+
+footer#footer {
 	display: none;
 }
