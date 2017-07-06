@@ -1,4 +1,4 @@
-/*
+/*/*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
  * the top of the compiled file, but it's generally better to create a new file per style scope.
@@ -8,48 +8,264 @@
  *= require_tree .
 */
 
+
+
+
+
+
 /*General*/
+
+html {
+
+	width: 100%;
+	max-height: 640px;
+}
 
 body {
 	background-color: #fff;
+
 }
+
+
+/*container*/
+
+.container {
+	width: 100%
+}
+
+#wrapper {
+	width: 100%;
+}
+
+.row {
+	display: inline-table;
+
+}
+
+
 
 /*Header*/
 
-header img {
-	
-	height: 200px;
+header {
+	color: #000;
+}
+
+/*HEADER LINKS*/
+
+#link-to-login, #link-to-cart {
+	float: right;
+}
+
+
+
+/*Logo*/
+
+header img  {
+	height: 250px;
 }  
+
+
+
+
+
 
 /*Nav*/
 
+
 nav #main-nav-bar {
-	border-bottom: none; 
+	border-bottom: none;
+	margin-top: -130px;
+
 }
 
-nav #taxon {
-	display: none;
+
+.container #top-nav-bar {
+	float: right;
 }
 
-nav #main-nav-bar li#link-to-cart a {
+/*SEARCH BAR*/
+
+.container #search-bar {
+	float: right;
+	margin-top: -140px;
+	margin-right: 50px;	
+	display: inline;
+
+}
+
+
+
+input#keywords {
+	min-height: 40px;
+	min-width: 250px; 
+	border: 2px solid #000;
+}
+
+input {
+	height: 40px;
+	min-width: 50px;
+	background-color: #fff !important;
+	border: 2px solid #000 !important;
+	color: #000 !important;
+}
+
+input, input#keywords {
+	display: inline;
+	margin-top: 120px;
+	margin-right: 50px;
+}
+
+/*NAV LINKS*/
+
+a {
+	text-decoration: none;
+	
+}
+
+h1 {
+	font-size: 40px;
+  	font-weight: 700;
+	margin-bottom: 20px;
+  	margin-top: 20px;
+  	text-align: center;
+}
+
+h2 {
+	font-size: 15px;
+  	font-weight: 600;
+	margin-bottom: 30px;
+  	margin-top: 10px;
+}
+
+.container {
+	margin: auto;
+	width: 100%;
+	position: static;
+	margin: 0;
+	text-align: center;
+}
+
+.ul-reset {
+	padding-left: 0;
+   margin-top: 0;
+   margin-bottom: 0;
+   list-style: none;
+
+}
+
+.dropdown {
+	text-align: center;
+}
+
+
+/* #Navigation Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+nav {
+	text-align: center;
+	background: #fff;
+	font-size: 0;
+	position: relative;
+}
+
+nav > ul > li {
+	display: inline-block;
+  	font-size: 14px;
+  	padding: 0 15px;
+  	position: relative;
+
+}
+
+nav > ul > li:first-child {
+	padding-left: 0;
+	text-align: center;
+}
+}
+nav > ul > li:last-child {
+	padding-right: 0;
+	text-align: center;
+}
+
+nav > ul > li > a {
 	color: #000;
+  	display: block;
+  	position: relative;
+  	padding: 10px;
 }
 
-nav#top-nav-bar ul li a {
+
+nav > ul > li:hover > a { 
+  	border-bottom: 3px solid #000;
+}
+
+
+
+/* #Mega Menu Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.mega-menu {
+	background: #fff;
+  	display: none;
+  	left: 0;
+  	position: absolute;
+  	width: 100%;
+
+}
+.mega-menu h3 {
+	color: #fff;
+}
+.mega-menu ul {
+  	margin-bottom: 20px;
+  	width: 100%;
+
+}
+.mega-menu ul:last-child {
+	margin-right: 0;
+}
+.mega-menu a {
+  	color: #000;
+  	display: block;
+  	text-align: center;
+}
+.mega-menu a:hover {
 	color: #000;
+	border-bottom: 2px solid #000;
 }
 
-#home-link {
-	display: none;
+
+
+/* #Droppable Class Styles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.droppable {
+	position: static;
+
+}
+.droppable > a:after {
+	content: "\f107";
+  	font-family: FontAwesome;
+  	font-size: 12px;
+  	padding-left: 6px;
+  	position: relative;
+  	top: -1px;
+}
+.droppable:hover .mega-menu {
+	display: block;
 }
 
-li#link-to-cart {
-	padding: 0px;
-	top: 0;
-	right: 0;
-}
 
-/*product images*/
+
+
+
+
+
+
+
+
+
+
+
+
+/*Product Images
 
 ul#products li .product-image img {
 	border-image: 1px solid #000; 
@@ -61,8 +277,254 @@ ul#products li .product-image {
 	
 }
 
-/*footer*/
 
-footer#footer {
-	display: none;
+
+
+/* HOME LANDING PAGE */
+
+/*GRID*/
+
+main {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+section, div {
+	min-height : 350px;
+	min-width : 300px;
+}
+
+
+div.innersection {
+  text-align: center; 
+  margin: 5px;
+  box-shadow: 2px 3px 3px 2px #fff;
+  border-color: lightgrey;
+  border-width: 2px;
+  transition-duration: 2s;
+  -webkit-transition-duration: 2s;
+
+}
+
+div.innersection:hover {
+  box-shadow: 3px 5px 5px 3px #fff;
+  border-color: #000;
+
+}
+
+#block1
+{
+	background-image: url("https://images.unsplash.com/photo-1484081331955-0512f26023a8?dpr=1&auto=format&fit=crop&w=1500&h=1002&q=80&cs=tinysrgb&crop=&bg=");
+	flex-basis : 60%;
+}
+
+
+
+
+
+#block2
+{
+	
+	flex-basis : 40%;
+	background-image: url("https://images.unsplash.com/photo-1494900937129-741bef975f87?dpr=1&auto=format&fit=crop&w=1500&h=1875&q=80&cs=tinysrgb&crop=&bg=");
+}
+
+#block3
+{
+	
+	flex-basis : 33.33%;
+	background-image: url("https://images.unsplash.com/photo-1459162141474-3bd9d0fb079d?dpr=1&auto=format&fit=crop&w=1500&h=2250&q=80&cs=tinysrgb&crop=&bg="); 
+
+}
+
+#block4
+{
+	
+	flex-basis : 33.33%;
+	background-image: url("https://images.unsplash.com/photo-1458336458944-27b9f90c7f38?dpr=1&auto=format&fit=crop&w=1500&h=1011&q=80&cs=tinysrgb&crop=&bg=");
+}
+
+#block5
+{
+	
+	flex-basis : 33.33%;
+	background-image: url("https://images.unsplash.com/photo-1474557242647-c4c248efbc5b?dpr=1&auto=format&fit=crop&w=1500&h=1000&q=80&cs=tinysrgb&crop=&bg=");
+	imag
+}
+
+@media (max-width : 800px)
+{
+	#block1{
+		flex-basis : 100%;
+	}
+	#block2, #block3, #block4, #block5{
+		flex-basis : 50%;
+	}
+}
+
+@media (max-width : 600px)
+{
+	#block1,#block2,#block3,#block4,#block5
+	{
+		flex-basis : 100%;
+	}
+}
+
+
+.container .sixteen.columns {
+
+	width: 100%;
+}
+
+
+/*GRID HREF LINKS*/
+
+
+#navigation {
+  list-style: none; 
+  font-size: 36px; 
+}
+
+#navigation > li {
+	display: inline-block;
+}
+
+#navigation > li > a:after {
+  width: 0; 
+  background-color: #fff; 
+  display: block; 
+  height: 2px; 
+  content:""; 
+  transition: width 0.1s linear; 
+  margin:0 auto 0 auto;
+}
+
+#navigation > li:hover > a:after {
+	width:100%;
+}
+
+#navigation a:link      {
+  display: block; 
+  color: #fff; 
+  text-decoration: none; 
+  padding-top: 70%;
+}
+
+#navigation a:visited   {
+	color:#fff;
+}
+
+#navigation a:hover     {
+	line-height: 2;
+}
+
+/* DIVIDER */
+
+/*KEY SERVICES*/
+
+
+
+/* STRUCTURE */
+
+
+#divider {
+	padding: 5px;
+	width: 60%;
+	margin: 20px auto;
+	background-color: #eee;
+	height: auto;	
+
+}
+
+#divider h2, p {
+  text-align: center;
+}
+
+#left {
+	width: 290px;
+	float: left;
+	padding: 5px 15px;
+}
+
+#middle {
+	width: 294px; /* Account for margins + border values */
+	float: left;
+	padding: 5px 15px;
+	margin: 0px 5px 5px 5px;
+}
+
+#sidebar {
+	width: 270px;
+	padding: 5px 15px;
+	float: left;
+}
+
+#divider img {
+	padding-bottom: 10px;
+
+
+}
+
+/*/************************************************************************************
+MEDIA QUERIES
+*************************************************************************************/
+/* for 980px or less */
+@media (max-width: 980px) {
+	
+	#divider {
+		width: 94%;
+	}
+	#left{
+		width: 41%;
+		padding: 1% 4%;
+	}
+	#middle {
+		width: 41%;
+		padding: 1% 4%;
+		margin: 0px 0px 5px 5px;
+		float: right;
+	}
+	
+	#sidebar {
+		clear: both;
+		padding: 1% 4%;
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 700px or less */
+@media (max-width: 600px) {
+
+	#left {
+		width: auto;
+		float: none;
+	}
+	
+	#middle {
+		width: auto;
+		float: none;
+		margin-left: 0px;
+	}
+	
+	#sidebar {
+		width: auto;
+		float: none;
+	}
+
+}
+
+/* for 480px or less */
+@media (max-width: 480px) {
+
+	#sidebar {
+		display: none;
+	}
+
+}
+
+#left, #middle, #sidebar {
+	margin-bottom: 5px;
+	border: none;
 }

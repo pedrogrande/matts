@@ -1,12 +1,85 @@
-<% content_for :sidebar do %>
-  <div data-hook="homepage_sidebar_navigation">
-    <%= render partial: 'spree/shared/taxonomies' %>
-  </div>
-<% end %>
-
 <div data-hook="homepage_products">
-  <% cache(cache_key_for_products) do %>
+<!--- <% cache(cache_key_for_products) do %>
     <%= render partial: 'spree/shared/products', locals: { products: @products } %>
-  <% end %>
+  <% end %> -->
+
+
+
+
+<!-- IMAGE CARDS -->
+<main>
+    <section id="block1">
+      <div class="innersection">
+      <ul id="navigation">
+       <li><a href="">Cliptop jars</a></li>
+       </ul>
+      </div>
+    </section>
+
+    <section id="block2">
+      <div class="innersection">
+      <ul id="navigation">
+       <li><a href="">Bottles</a></li>
+       </ul>
+      </div>
+      </section>
+    
+
+
+    <section id="block3">
+      <div class="innersection">
+      <ul id="navigation">
+       <li><a href="">Jars</a></li>
+       </ul>
+      </div>
+    </section>
+
+    <section id="block4">
+      <div class="innersection">
+      <ul id="navigation">
+       <li><a href="">Cosmetics</a></li>
+       </ul>
+      </div>
+    </section>
+    
+    <section id="block5">
+      <div class="innersection">
+      <ul id="navigation">
+       <li><a href="">Pharma</a></li>
+       </ul>
+      </div>
+    </section>
+  </main>
 </div>
 
+<!-- DIVIDER -->
+
+<div id="divider">
+
+	<section id="left">
+		<h2>Orders</h2>
+		<p>We cater for offers big and small.</p>
+	</section>
+	
+	<section id="middle">
+		<h2>Shipping</h2>
+		<p>We offer shipping support.</p>
+	</section>
+
+	<aside id="sidebar">
+		<h2>Support</h2>
+		<p>We offer customer support 7 days a week.</p>
+	</aside>
+	
+</div>
+
+
+
+
+<!-- FOOTER -->
+<!-- 
+<footer>
+		<h4>Contact Us</h4>
+		<p>Footer text</p>
+	</footer>
+ -->
