@@ -1,5 +1,7 @@
 <nav id="top-nav-bar" class="columns ten">
   <ul id="nav-bar" class="inline" data-hook>
+      <li id="search-bar" data-hook>
+    </li>
       <li id="link-to-cart" data-hook>
       <noscript>
         <%= link_to Spree.t(:cart), spree.cart_path %>
@@ -8,11 +10,5 @@
     </li>
   </ul>
   <script>Spree.fetch_cart('<%= j spree.cart_link_path %>')</script>
-
-<ul id="nav-bar" class="inline" data-hook>
-    <li id="search-bar" data-hook>
-    </li>
-    <%= render partial: 'spree/shared/search' %>
-      </ul>
-
 </nav>
+    <%= render partial: 'spree/shared/search' %>
