@@ -89,8 +89,6 @@ nav #main-nav-bar {
 	float: right;
 	margin-top: -140px;
 	margin-right: 50px;	
-	display: inline;
-
 }
 
 
@@ -101,6 +99,7 @@ input#keywords {
 	border: 2px solid #000;
 }
 
+
 input {
 	height: 40px;
 	min-width: 50px;
@@ -109,10 +108,10 @@ input {
 	color: #000 !important;
 }
 
-input, input#keywords {
+input input#keywords {
 	display: inline;
 	margin-top: 120px;
-	margin-right: 50px;
+
 }
 
 /*NAV LINKS*/
